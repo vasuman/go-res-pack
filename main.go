@@ -79,13 +79,13 @@ func genGoFile(fPath string, info os.FileInfo, err error) error {
 func init() {
 	flag.Parse()
 	dataDir = flag.Arg(0)
-	resFilename = flag.Arg(1)
+	resFileName = flag.Arg(1)
 }
 
 func main() {
 	const outFileFlags = os.O_CREATE | os.O_WRONLY | os.O_TRUNC
 	var err error
-	outFile, err = os.OpenFile(resFilename, outFileFlags, 0660)
+	outFile, err = os.OpenFile(resFileName, outFileFlags, 0660)
 	panicIf(err)
 	defer outFile.Close()
 	fmt.Fprint(outFile, fileHeader)
