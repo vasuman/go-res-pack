@@ -28,6 +28,7 @@ var (
 
 func genInit() {
 	var err error
+	_ = fmt.Sprintf("%v", err)
 `
 	templateDecl = `
 	_, err = Template.Parse(%#[2]v)
