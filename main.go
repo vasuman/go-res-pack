@@ -47,7 +47,7 @@ func genInit() {
 var (
 	outFile     *os.File
 	dataDir     string
-	outFileName string
+	resFileName string
 )
 
 func panicIf(err error) {
