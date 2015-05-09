@@ -1,9 +1,9 @@
-# go-res-pack
+# go-res-pack #
 
 A tool that packages resource files (templates and stylesheets) with
 your Go app.
 
-## Usage
+## Usage ##
 
 Resources get their own package. Within this package have a
 directory(`<data-dir>`) in which the files are stored.
@@ -28,5 +28,16 @@ be called.
 
 Then you can access,
 
-* Template - `Template`
-* Styles - `Styles`
+### Templates ###
+
+Files with the extension `.tmpl` are parsed as templates and can be
+accessed using the `Template` variable exposed by the package.
+
+All template files are parsed into a single template.
+
+### Styles ###
+
+Files with the extension `.css` are considered styleshhets and are
+avaiable via the `Styles` map that maps the path of the stylesheet -
+relative to the `<data-dir>` - to its content.
+
